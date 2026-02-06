@@ -13,7 +13,7 @@ import Contact from "./Pages/Contact";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import ScrollToTopButton from "./Components/ScrollToTopButton";
-import ScrollToTop from "./Components/ScrollToTop";
+import ScrollToTop from "./Components/Scrolltotop";
 
 function App() {
   return (
