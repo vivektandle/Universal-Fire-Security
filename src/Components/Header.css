@@ -1,120 +1,73 @@
-/* src/components/Header.css */
-
-
-.logo {
-  padding: 5px 10px;
-  border-radius: 20px;
-  background-color: rgba(255, 0, 0, 0.2);
-  font-weight: bold;
-  color: red;
-  font-size: clamp(16px, 2.5vw, 22px); /* responsive text */
-  white-space: nowrap; /* prevents ugly line break */
+/* Hamburger hidden on desktop */
+.hamburger {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
 }
 
-
-.nav-links {
+/* Sidebar styles */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -260px;
+  width: 250px;
+  height: 100%;
+  background: white;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.2);
+  padding: 60px 20px;
   display: flex;
-  gap: 25px;
+  flex-direction: column;
+  gap: 20px;
+  transition: right 0.3s ease-in-out;
+  z-index: 1001;
 }
 
-.nav-links a {
+.sidebar.active {
+  right: 0;
+}
+
+.sidebar a {
   text-decoration: none;
   color: black;
+  font-size: 18px;
   font-weight: 500;
-  transition: color 0.3s ease;
 }
 
-.nav-links a:hover {
+.sidebar a:hover {
   color: red;
 }
 
-.call-button a {
-  background-color: red;
-  color: white;
-  padding: 8px 16px;
-  border-radius: 25px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: background 0.3s ease, transform 0.2s ease;
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 22px;
+  cursor: pointer;
 }
 
-.call-button a:hover {
-  background-color: darkred;
-  transform: scale(1.05);
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  z-index: 1000;
 }
 
+/* Mobile view */
 @media (max-width: 768px) {
   .nav-links {
     display: none;
   }
 
-  .header {
-    justify-content: space-between;
-  }
-
-  .logo {
-    flex: 1 1 60%;
+  .hamburger {
+    display: block;
   }
 
   .call-button {
-    flex: 1 1 35%;
-    display: flex;
-    justify-content: flex-end;
+    display: none;
   }
-}
-
-
-.header {
-  background: var(--card-white);
-  padding: 15px 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;   /* ⭐ important */
-  gap: 10px;
-width: 100%;
-  box-sizing: border-box;
-}
-
-
-
-
-
-.nav-links a {
-  margin: 0 15px;
-  text-decoration: none;
-  color: var(--text-dark);
-  font-weight: 500;
-  transition: 0.3s;
-}
-
-.nav-links a:hover {
-  color: var(--primary-red);
-}
-
-.call-btn {
-  background: var(--primary-red);
-  color: white;
-  padding: 8px 16px;
-  border-radius: 5px;
-}
-
-
-.call-button a {
-  background-color: red;
-  color: white;
-  padding: 8px 16px;
-  border-radius: 25px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: 0.3s;
-  white-space: nowrap;
-  font-size: clamp(12px, 2.5vw, 16px);
-}
-
-
-.nav-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
 }
