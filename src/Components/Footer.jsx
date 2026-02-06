@@ -74,7 +74,22 @@ function Footer() {
       </div>
       <p className="copyright">
         Copyright © 2026 Universal Fire & Security, All Right Reserved ||
-        Designed By RCS Technology
+        Designed By
+        <a
+          href="https://rcsinfo.in"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            color: "#C62828",
+            textDecoration: "none",
+            fontWeight: "500",
+          }}
+          onMouseOver={(e) => (e.target.style.textDecoration = "underline")}
+          onMouseOut={(e) => (e.target.style.textDecoration = "none")}
+        >
+          {" "}
+          RCS Technology
+        </a>
       </p>
     </footer>
   );
