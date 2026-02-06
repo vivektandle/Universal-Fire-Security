@@ -23,22 +23,14 @@ function Header() {
           <a href="tel:+919092459092">📞 +91 - 9092459092</a>
         </div>
 
-        {/* Hamburger Icon */}
-        <div className="hamburger" onClick={() => setMenuOpen(true)}>
-          ☰
+        {/* Mobile Toggle Button */}
+        <div className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
+          {menuOpen ? "✖" : "☰"}
         </div>
       </header>
 
-      {/* Overlay */}
-      {menuOpen && (
-        <div className="overlay" onClick={() => setMenuOpen(false)}></div>
-      )}
-
       {/* Sidebar */}
       <div className={`sidebar ${menuOpen ? "active" : ""}`}>
-        <span className="close-btn" onClick={() => setMenuOpen(false)}>
-          ✖
-        </span>
         <Link to="/" onClick={() => setMenuOpen(false)}>
           Home
         </Link>
@@ -55,6 +47,11 @@ function Header() {
           Contact
         </Link>
       </div>
+
+      {/* Overlay */}
+      {menuOpen && (
+        <div className="overlay" onClick={() => setMenuOpen(false)}></div>
+      )}
     </>
   );
 }

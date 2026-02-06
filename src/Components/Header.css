@@ -1,25 +1,82 @@
-/* Hamburger hidden on desktop */
-.hamburger {
-  display: none;
-  font-size: 26px;
-  cursor: pointer;
+/* Header Layout */
+.header {
+  background: white;
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1002;
 }
 
-/* Sidebar styles */
+/* Logo */
+.logo {
+  padding: 5px 12px;
+  border-radius: 20px;
+  background-color: rgba(255, 0, 0, 0.15);
+  font-weight: bold;
+  color: red;
+  font-size: clamp(16px, 2.5vw, 22px);
+  white-space: nowrap;
+}
+
+/* Desktop Nav */
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: red;
+}
+
+/* Call Button */
+.call-button a {
+  background-color: red;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+  white-space: nowrap;
+}
+
+.call-button a:hover {
+  background-color: darkred;
+  transform: scale(1.05);
+}
+
+/* Mobile Toggle Button */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  z-index: 1102;
+}
+
+/* Sidebar */
 .sidebar {
   position: fixed;
   top: 0;
-  right: -260px;
+  right: -290px;
   width: 250px;
   height: 100%;
   background: white;
   box-shadow: -2px 0 10px rgba(0,0,0,0.2);
-  padding: 60px 20px;
+  padding: 80px 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;
   transition: right 0.3s ease-in-out;
-  z-index: 1001;
+  z-index: 1101;
 }
 
 .sidebar.active {
@@ -37,15 +94,6 @@
   color: red;
 }
 
-/* Close button */
-.close-btn {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  font-size: 22px;
-  cursor: pointer;
-}
-
 /* Overlay */
 .overlay {
   position: fixed;
@@ -54,20 +102,17 @@
   width: 100%;
   height: 100%;
   background: rgba(0,0,0,0.4);
-  z-index: 1000;
+  z-index: 1100;
 }
 
-/* Mobile view */
+/* Mobile Styles */
 @media (max-width: 768px) {
-  .nav-links {
-    display: none;
-  }
-
-  .hamburger {
-    display: block;
-  }
-
+  .nav-links,
   .call-button {
     display: none;
+  }
+
+  .menu-toggle {
+    display: block;
   }
 }
