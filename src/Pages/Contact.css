@@ -1,0 +1,38 @@
+/* src/pages/Contact.css */
+
+.contact-page {
+  font-family: 'Poppins', sans-serif;
+  color: black;
+  padding: 50px 20px;
+  background: rgba(255, 0, 0, 0.05); /* light transparent red */
+}
+
+.contact-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
+}
+
+.contact-left, .contact-right {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-heading {
+  color: blue; /* main heading color */
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.contact-right img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  background: rgba(255,0,0,0.1); /* optional overlay */
+}

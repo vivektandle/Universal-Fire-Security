@@ -1,0 +1,55 @@
+/* ========== GLOBAL RESET ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: white;
+  color: #222;
+}
+
+section {
+  padding: 80px 0;
+  margin-bottom: 80px; /* bigger gap = more premium feel */
+}
+
+/* ========== CONTAINER ========== */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ========== COLOR VARIABLES ========== */
+:root {
+  --primary: #C62828;
+  --primary-light: #fff5f5;
+  --accent: #0D47A1;
+  --text-dark: #222;
+}
+
+/* ========== SHARED SECTION BACKGROUNDS ========== */
+.stats-section,
+.certifications-section,
+.testimonials-section {
+  background: var(--primary-light);
+}
+
+/* ========== SHARED TEXT COLORS ========== */
+.stat-icon {
+  color: var(--primary);
+}
+
+.section-title,
+.stat-card h3,
+.testimonial-card h4,
+.why-right h2 {
+  color: var(--accent);
+}
+
+section:last-of-type {
+  margin-bottom: 0; /* removes extra gap after final section */
+}

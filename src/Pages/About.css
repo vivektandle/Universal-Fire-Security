@@ -1,0 +1,47 @@
+/* src/pages/About.css */
+
+.about-page {
+  font-family: 'Times New Roman', Times, serif;
+  color: black;
+}
+
+.about-section {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px 10px;
+  gap: 30px;
+  background: rgba(255, 0, 0, 0.05); /* light transparent red background */
+  align-items: center;
+}
+
+.about-left {
+  flex: 1;
+  min-width: 300px;
+}
+.about-left img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+.about-right {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about-right h1.about-slogan {
+  color: red; /* main heading color */
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.about-right p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.about-right h1{
+  color: black;
+  font-family:'Times New Roman', Times, serif;
+  font-size:40px ;
+}

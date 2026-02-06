@@ -1,0 +1,120 @@
+/* src/components/Header.css */
+
+
+.logo {
+  padding: 5px 10px;
+  border-radius: 20px;
+  background-color: rgba(255, 0, 0, 0.2);
+  font-weight: bold;
+  color: red;
+  font-size: clamp(16px, 2.5vw, 22px); /* responsive text */
+  white-space: nowrap; /* prevents ugly line break */
+}
+
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: red;
+}
+
+.call-button a {
+  background-color: red;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.call-button a:hover {
+  background-color: darkred;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .header {
+    justify-content: space-between;
+  }
+
+  .logo {
+    flex: 1 1 60%;
+  }
+
+  .call-button {
+    flex: 1 1 35%;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+
+.header {
+  background: var(--card-white);
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;   /* ⭐ important */
+  gap: 10px;
+width: 100%;
+  box-sizing: border-box;
+}
+
+
+
+
+
+.nav-links a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--primary-red);
+}
+
+.call-btn {
+  background: var(--primary-red);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 5px;
+}
+
+
+.call-button a {
+  background-color: red;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+  white-space: nowrap;
+  font-size: clamp(12px, 2.5vw, 16px);
+}
+
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
